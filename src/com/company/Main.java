@@ -10,6 +10,9 @@ public class Main {
     dog.feed();
     dog.feed();
     dog.feed();
+    dog.feed();
+
     System.out.println("Pies waży " + dog.getWeight());
     }
+
 }
