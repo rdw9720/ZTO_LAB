@@ -19,4 +19,5 @@ public class Main {
     System.out.println(me.getWeight());
     System.out.println(me.species);
     System.out.println(me.name);
+    Phone nokia = new Phone();
 }}
