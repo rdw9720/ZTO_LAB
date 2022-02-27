@@ -20,7 +20,7 @@ public class Animal {
         } else if (species.equals("felis")) {
             this.weight = DEFAULT_CAT_WEIGHT;
         } else {
-            this.weight = DEFAULT_ANIMAL_WEIGHT;
+            this.weight = DEFAULT_DOG_WEIGHT;
         }
     }
     public Double getWeight(){
