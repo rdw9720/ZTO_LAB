@@ -2,12 +2,18 @@ package com.company;
 
 public class Animal {
     public enum FoodType {
-        MEET,
-        CORPS,
-        ALL
+        MEET(0.7),
+        CORPS(0.3),
+        ALL(0.5);
+
+        final Double foodBodyRatio;
+        private FoodType(Double foodBodyRatio){
+            this.foodBodyRatio = foodBodyRatio;
+        }
     }
     private static final Double DEFAULT_DOG_WEIGHT = 3.0;
     private static final Double DEFAULT_CAT_WEIGHT = 3.0;
+    private static final Double DEFAULT_COW_WEIGHT = 3.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 3.0;
 
     final String species;
@@ -41,11 +47,11 @@ public class Animal {
     }
     public void feed(Double foodWeight, FoodType foodType){
         switch (foodType) {
-            case ALL -> this.weight += 0.5 * foodWeight;
+            case ALL -> this.weight += FoodType.ALL.foodBodyRatio * foodWeight;
             break;
-            case MEET -> this.weight += 0.7 * foodWeight;
+            case MEET -> this.weight += FoodType.MEET.foodBodyRatio * foodWeight;
             break;
-            case CORPS -> this.weight += 0.3 * foodWeight;
+            case CORPS -> this.weight += FoodType.CORPS.foodBodyRatio * foodWeight;
             break;
         }
         System.out.println("thx for food");
