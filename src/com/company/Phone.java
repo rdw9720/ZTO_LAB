@@ -2,6 +2,11 @@ package com.company;
 
 public class Phone extends  Device {
     Double screenSize;
+public enum OperationSystem{
+    ANDROID, WINDOWS, iOS;
+}
+double screenSize;
+OperationSystem operationSystem;
 
     @Override
     public void turnON() {

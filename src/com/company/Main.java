@@ -7,11 +7,12 @@ public class Main {
     System.out.println("pies nazywa się " + dog.name);
     System.out.println("pies waży " + dog.getWeight());
     System.out.println(dog.species);
-    dog.feed();
-    dog.feed();
-    dog.feed();
-    dog.feed();
-    dog.feed();
+    dog.feed(0.1, Animal.FoodType.ALL);
+    dog.feed(0.1, Animal.FoodType.ALL);
+    dog.feed(0.1, Animal.FoodType.ALL);
+    dog.feed(0.1, Animal.FoodType.ALL);
+    dog.feed(0.1, Animal.FoodType.ALL);
+    dog.feed(0.1, Animal.FoodType.ALL);
 
     System.out.println("Pies waży " + dog.getWeight());
 
@@ -20,4 +21,6 @@ public class Main {
     System.out.println(me.species);
     System.out.println(me.name);
     Phone nokia = new Phone();
-}}
+    nokia.operationSystem = Phone.OperationSystem.WINDOWS;
+    }
+}
